@@ -2,6 +2,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 
 public class ThreadPoolApp {
+    
+    /** 
+     * Takes two arguments, and executes the jobs 
+     * @param args args[0] the number of jobs to execute, 
+     * args[1] the number of threads to exexute the jobs on
+     */
     public static void main(String[] args) {
         if (args.length < 2) {
             ThreadPoolApp.error();
@@ -25,6 +31,9 @@ public class ThreadPoolApp {
             ThreadPoolApp.error();
         }
     }
+    /**
+     * Prints an error message when theres an invalid number of arguments.
+     */
     private static void error() {
         System.out.println("ThreadPoolApp must be ran with two positive valued integer arguments." +
             "The first detailing the number of jobs the second the number of processing threads in the pool");
